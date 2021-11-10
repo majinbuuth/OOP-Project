@@ -1,1 +1,9 @@
 
+public class mainClass {
+	public static void main(String[] args) {
+    // testing the courses class
+		courses c = new courses("1","OOP","1","8:00 - 9:15","1","L2006","Shoufan","25","23","25","21-08-2021","03-12-2021");
+		c.display();
+	}
+
+}
