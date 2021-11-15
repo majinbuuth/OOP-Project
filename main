@@ -1,9 +1,42 @@
 
-public class mainClass {
-	public static void main(String[] args) {
-    // testing the courses class
+import java.awt.*;
+import javax.swing.*;
+
+public class mainClass extends JFrame {
+	JFrame frame;
+	JLabel loginPage,kuLogo;
+	JTextField id,password;
+	JButton loginBt;
+	
+	public mainClass() {
+		loginPage = new JLabel("Login Page");
+		id = new JTextField("Id:");
+		password = new JTextField("Password:");
+		loginBt = new JButton("login");
+		kuLogo = new JLabel(new ImageIcon("Images/kuLogo.png"));
+		loginBt.setSize(100, 50);
+		
+		GridLayout layout = new GridLayout(6,1);
+		setLayout(layout);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(400,500);
+		add(kuLogo);
+		add(new JLabel(" "));
+		add(loginPage);
+		add(id);
+		add(password);
+		add(loginBt);
+	}
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args)  {
 		courses c = new courses("1","OOP","1","8:00 - 9:15","1","L2006","Shoufan","25","23","25","21-08-2021","03-12-2021");
-		c.display();
+		new mainClass();
 	}
 
 }
